@@ -26,3 +26,6 @@ jobs:
         with:
           solc: "solc_0_8_11"
       - run: dapp --version
+        env:
+          DAPP_SOLC_VERSION: 0.8.11
+
