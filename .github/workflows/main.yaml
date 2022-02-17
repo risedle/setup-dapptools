@@ -7,4 +7,3 @@ jobs:
     steps:
       - uses: risedle/setup-dapptools@v1
       - run: dapp --version
-

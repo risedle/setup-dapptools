@@ -1,8 +1,6 @@
 name: "Setup dapptools environment"
-description: "Setup a dapptools environment by adding problem matchers and optionally downloading and adding it to the PATH"
+description: "Setup a dapptools environment by downloading and adding it to the PATH"
 author: "Risedle"
-inputs:
-outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
