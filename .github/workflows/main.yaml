@@ -3,14 +3,14 @@ on: [push]
 jobs:
   default:
     runs-on: ubuntu-latest
-    name: dapp --version
+    name: default
     steps:
       - uses: actions/checkout@v2
       - uses: ./
       - run: dapp --version
   custom-tarball:
     runs-on: ubuntu-latest
-    name: dapp --version
+    name: custom tarball
     steps:
       - uses: actions/checkout@v2
       - uses: ./
@@ -19,7 +19,7 @@ jobs:
       - run: dapp --version
   custom-solc:
     runs-on: ubuntu-latest
-    name: dapp --version
+    name: custom solc
     steps:
       - uses: actions/checkout@v2
       - uses: ./
