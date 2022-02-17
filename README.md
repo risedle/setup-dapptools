@@ -8,3 +8,14 @@ This action provides the following functionality for GitHub Actions users:
 
 See [action.yaml](action.yaml)
 
+**Basic:**
+```yaml
+steps:
+- uses: actions/checkout@v2
+- uses: risedle/setup-dapptools@v2
+- run: dapp build
+```
+
+# License
+
+The scripts and documentation in this project are released under the [MIT License](LICENSE)
