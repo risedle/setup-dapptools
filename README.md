@@ -29,11 +29,6 @@ steps:
 
 ### solc version
 
-You can specify a custom solc version to run within dapp with `dapp --use <arg>`.
-If the argument is of the form `solc:x.y.z`, the appropriate solc version will
-temporarily installed. If the argument contains a `/`, it is interpreted as
-a path to a solc binary to be used.
-
 You can also install the specific solc version using the following configuration:
 
 ```yaml
