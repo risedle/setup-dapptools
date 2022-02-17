@@ -1,8 +1,6 @@
 # setup-dapptools
 
-This action provides the following functionality for GitHub Actions users:
-
-- Optionally downloading and caching distribution of the requested dapptools version, and adding it to the PATH
+This action provides access to dapptools for GitHub Actions users.
 
 # Usage
 
@@ -15,6 +13,16 @@ steps:
 - uses: risedle/setup-dapptools@v2
 - run: dapp build
 ```
+
+You can add `tarballURL` as the input to specify the dapptools version:
+
+```yaml
+steps:
+- uses: actions/checkout@v2
+- uses: risedle/setup-dapptools@v2
+- run: dapp build
+```
+
 
 # License
 
