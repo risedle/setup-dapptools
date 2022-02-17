@@ -9,7 +9,7 @@ inputs:
   solc:
     description: "The version of solidity compiler"
     required: false
-    default: "solc-linux-amd64-v0.8.6+commit.11564f7e"
+    default: "solc_0_8_6"
 runs:
   using: "composite"
   steps:
