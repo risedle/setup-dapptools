@@ -23,4 +23,4 @@ cat > "$tmpfile" <<'EOF'
 EOF
 
 nix-shell --pure -p cacert cachix curl git jq nix --run "sh $tmpfile"
-which dapp
+echo "/root/.nix-profile/bin" >> $GITHUB_PATH
