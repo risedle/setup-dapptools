@@ -5,5 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: dapp --version
     steps:
+      - uses: actions/checkout@v2
       - uses: ./
       - run: dapp --version
