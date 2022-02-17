@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  dapp-version:
+    runs-on: ubuntu-latest
+    name: dapp --version
+    steps:
+      - uses: risedle/setup-dapptools@v1
+      - run: dapp --version
+
