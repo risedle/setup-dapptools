@@ -17,3 +17,6 @@ runs:
         name: dapp
     - run: nix-env -iA dapp hevm seth ethsign solc -f ${{ inputs.tarballURL }}
       shell: bash
+branding:
+  icon: "star"
+  color: "black"
