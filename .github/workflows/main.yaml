@@ -1,10 +1,28 @@
 name: setup-dapptools
 on: [push]
 jobs:
-  dapp-version:
+  default:
     runs-on: ubuntu-latest
     name: dapp --version
     steps:
       - uses: actions/checkout@v2
       - uses: ./
+      - run: dapp --version
+  custom-tarball:
+    runs-on: ubuntu-latest
+    name: dapp --version
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          tarball: "https://github.com/dapphub/dapptools/archive/master.tar.gz"
+      - run: dapp --version
+  custom-solc:
+    runs-on: ubuntu-latest
+    name: dapp --version
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          solc: "0.8.7"
       - run: dapp --version

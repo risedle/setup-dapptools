@@ -2,10 +2,14 @@ name: "Setup dapptools environment"
 description: "Setup a dapptools environment by downloading and adding it to the PATH"
 author: "Risedle"
 inputs:
-  tarballURL:
+  tarball:
     description: "The tarball url of dapptools"
     required: false
     default: "https://github.com/dapphub/dapptools/archive/refs/tags/hevm/0.49.0.tar.gz"
+  solc:
+    description: "The version of solidity compiler"
+    required: false
+    default: "0.8.11"
 runs:
   using: "composite"
   steps:
@@ -15,7 +19,7 @@ runs:
     - uses: cachix/cachix-action@v10
       with:
         name: dapp
-    - run: nix-env -iA dapp hevm seth ethsign solc -f ${{ inputs.tarballURL }}
+    - run: nix-env -iA dapp hevm seth ethsign solc-${{ inputs.solc }} -f ${{ inputs.tarball }}
       shell: bash
 branding:
   icon: "star"
