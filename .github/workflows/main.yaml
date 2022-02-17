@@ -1,10 +1,10 @@
+name: setup-dapptools
 on: [push]
-
 jobs:
   dapp-version:
     runs-on: ubuntu-latest
     name: dapp --version
     steps:
-      - uses: risedle/setup-dapptools@v1
+      - uses: actions/checkout@v2
+      - uses: ./
       - run: dapp --version
-
