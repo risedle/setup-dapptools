@@ -8,5 +8,6 @@ runs:
       with:
         nix_path: nixpkgs=channel:nixos-unstable
     - run: cachix use dapp
+      shell: bash
     - run: nix-env -iA dapp hevm seth ethsign solc -f https://github.com/dapphub/dapptools/archive/refs/tags/hevm/0.49.0.tar.gz
-    - run: dapp --version
+      shell: bash
