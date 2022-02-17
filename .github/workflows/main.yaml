@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     name: dapp --version
     steps:
-      - uses: risedle/setup-dapptools
+      - uses: ./
       - run: dapp --version
