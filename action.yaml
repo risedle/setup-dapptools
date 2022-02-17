@@ -9,7 +9,7 @@ inputs:
   solc:
     description: "The version of solidity compiler"
     required: false
-    default: "0.8.11"
+    default: "solc-linux-amd64-v0.8.8+commit.dddeac2f"
 runs:
   using: "composite"
   steps:
@@ -19,7 +19,7 @@ runs:
     - uses: cachix/cachix-action@v10
       with:
         name: dapp
-    - run: nix-env -iA dapp hevm seth ethsign solc-${{ inputs.solc }} -f ${{ inputs.tarball }}
+    - run: nix-env -iA dapp hevm seth ethsign ${{ inputs.solc }} -f ${{ inputs.tarball }}
       shell: bash
 branding:
   icon: "star"
