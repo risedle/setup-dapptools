@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
-nix-env -iA dapp -f $(curl -sS https://api.github.com/repos/dapphub/dapptools/releases/latest | jq -r .tarball_url)
-nix-env -iA hevm -f $(curl -sS https://api.github.com/repos/dapphub/dapptools/releases/latest | jq -r .tarball_url)
-nix-env -iA seth -f $(curl -sS https://api.github.com/repos/dapphub/dapptools/releases/latest | jq -r .tarball_url)
+nix-env -iA dapp -f https://github.com/dapphub/dapptools/archive/refs/tags/hevm/0.49.0.tar.gz
+nix-env -iA hevm -f https://github.com/dapphub/dapptools/archive/refs/tags/hevm/0.49.0.tar.gz
+nix-env -iA seth -f https://github.com/dapphub/dapptools/archive/refs/tags/hevm/0.49.0.tar.gz
+
