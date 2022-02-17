@@ -19,7 +19,7 @@ runs:
     - uses: cachix/cachix-action@v10
       with:
         name: dapp
-    - run: nix-env -iA dapp hevm seth ethsign "${{ inputs.solc }}" -f ${{ inputs.tarball }}
+    - run: nix-env -iA dapp hevm seth ethsign "solc-static-versions.${{ inputs.solc }}" -f ${{ inputs.tarball }}
       shell: bash
 branding:
   icon: "star"
